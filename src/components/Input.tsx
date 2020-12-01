@@ -1,5 +1,6 @@
 import React from "react";
 import MaskInput from "react-input-mask";
+import './sass/main.scss'
 
 export interface InputProps {
 

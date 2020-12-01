@@ -1,7 +1,7 @@
 {
   "name": "megres-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -47,5 +47,17 @@
     "@types/react-input-mask": "^3.0.0",
     "@types/sass": "^1.16.0",
     "@types/styled-components": "^5.1.4"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustomegres/components.git"
+  },
+  "author": "augustomegres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/augustomegres/components/issues"
+  },
+  "homepage": "https://github.com/augustomegres/components#readme"
 }

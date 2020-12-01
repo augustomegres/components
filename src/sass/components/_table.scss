@@ -15,7 +15,7 @@
         display: flex;
         height: 48px;
         &.disabled {
-          color: rgba(190, 190, 190);
+          color: rgb(190, 190, 190);
         }
       }
 
@@ -38,7 +38,7 @@
           border-radius: 50px;
         }
         :hover {
-          background: rgb(0, 0, 0, 0.1);
+          background: rgba(0, 0, 0, 0.1);
         }
       }
     }
