@@ -1,0 +1,114 @@
+._table {
+  overflow: auto;
+  background: rgb(255, 255, 255);
+  
+  @include scrollbars(7px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+
+  .table-body {
+    min-width: 800px;
+    .header,
+    .body {
+      font-weight: 200;
+
+      .row {
+        cursor: pointer;
+        display: flex;
+        height: 48px;
+        &.disabled {
+          color: rgba(190, 190, 190);
+        }
+      }
+
+      .body-item {
+        display: flex;
+        align-items: center;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        p {
+          margin: 0 8px;
+        }
+      }
+      .table-icon {
+        transition: 0.2s;
+        color: $PRIMARY;
+        i {
+          padding: 4px;
+          border-radius: 50px;
+        }
+        :hover {
+          background: rgb(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .header {
+      font-weight: normal;
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid rgb(240, 240, 240);
+
+      .row {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        p {
+          margin: 0 8px;
+        }
+        .header-item {
+          height: 100%;
+          cursor: pointer;
+          user-select: none;
+          display: flex;
+          align-items: center;
+          transition: 0.5s;
+          &:hover {
+            background-color: rgb(245, 245, 245);
+          }
+        }
+      }
+
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.02);
+    }
+
+    .body > .row:hover {
+      background: rgb(240, 240, 240);
+    }
+
+    .row :nth-child(1) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dropdown {
+      line-height: 0;
+      overflow: hidden;
+
+      .dropdown-content {
+        transition: 0.2s;
+
+        opacity: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &.active {
+        line-height: 1.6;
+        border: 1px solid #ddd;
+        border-right: none;
+        border-left: none;
+
+        .dropdown-content {
+          opacity: 1;
+          > div {
+            opacity: 1;
+            padding: 8px 16px;
+          }
+        }
+      }
+    }
+  }
+}
