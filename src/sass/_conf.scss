@@ -1,0 +1,38 @@
+/*|---------------|App Color Schema|---------------|*/
+$PRIMARY: #5032ff;
+$TEXT: #707070;
+
+/*|---------------|BREAKPOINTS|---------------|*/
+
+// Usage example:  @media #{$BREAKPOINT-DESK}
+
+$DESKTOP-GIANT: "only screen and (min-width: 1280px)";
+$DESKTOP: "only screen and (min-width: 975px)";
+$TABLET-LAND: "only screen and (min-width: 600px)";
+$TABLET: "only screen and (min-width: 480px)";
+$MOBILE-LAND: "only screen and (min-width: 400px)";
+
+/*|---------------|MIXINS|---------------|*/
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

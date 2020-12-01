@@ -1,0 +1,34 @@
+._input {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    text-transform: uppercase;
+    font-size: 10px;
+    margin: 0 0 4px 4px;
+  }
+
+  .input {
+    font-size: 16px;
+    padding: 8px;
+    border: 0.5px solid rgb(150, 150, 150);
+    border-radius: 3px;
+    color: rgb(150, 150, 150);
+
+    &:focus {
+      color: rgb(0, 0, 0);
+      border: 0.5px solid rgb(0, 0, 0);
+      transform-origin: 50%;
+      transition: all 0.3s linear;
+    }
+
+    &.error {
+      border: 0.5px solid rgb(230, 66, 66);
+      color: rgb(230, 66, 66);
+    }
+
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+}
